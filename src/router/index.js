@@ -9,7 +9,7 @@ import 'nprogress/nprogress.css'// progress bar style
 
 NProgress.configure({ showSprinner: false})     //NProgress Configuration
 
-const whiteList = ['/login']    // 无指向的空白列表
+const whiteList = ['/login']    // 白名单
 
 router.beforeEach((to, from, next) => {
   if(to.meta.title){

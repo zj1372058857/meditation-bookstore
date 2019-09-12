@@ -1,6 +1,17 @@
 import Layout from '@/layout/Layout'
+import {constantRouterMap} from '@/router/routers'
 
 const permission = {
+  state: {
+    routers: constantRouterMap,
+    addRoutes: []
+  },
+  mutations: {
+    SET_ROUTERS: (state, routers) => {
+      state.addRoutes = routers
+      state.routers = constantRouterMap.concat(routers)
+    }
+  },
   actions: {
     GenerateRoutes({commit}, asyncRouter) {
       commit('SET_ROUTERS', asyncRouter)

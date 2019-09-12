@@ -1,12 +1,12 @@
 import request from '@/utils/request'
 
 //登录
-export function login(userName,password,code,uuid) {
+export function login(username,password,code,uuid) {
   return request({
     url: 'api/login',
     method: 'post',
     data: {
-      userName,
+      username,
       password,
       code,
       uuid
